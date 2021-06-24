@@ -1,25 +1,25 @@
-noun	food	category
+food	noun	category
 
-noun	fruit	category
-noun	apple	fruit
-noun	banana	fruit
-noun	orange	fruit
+fruit	noun	category
+apple	noun	fruit
+banana	noun	fruit
+orange	noun	fruit
 
-noun	vegetable	category
-noun	cabbage	vegetable
-noun	potato	vegetable
-noun	radish	vegetable
+vegetable	noun	category
+cabbage	noun	vegetable
+potato	noun	vegetable
+radish	noun	vegetable
 
-noun	cloth	category
-noun	shirt	cloth
-noun	pants	cloth
-noun	skirt	cloth
-noun	jacket	cloth
+cloth	noun	category
+shirt	noun	cloth
+pants	noun	cloth
+skirt	noun	cloth
+jacket	noun	cloth
 
-verb	am
-verb	are
-verb	is
-verb	find
-verb	want
-verb	buy
-verb	sell
+am	verb	
+are	verb	
+is	verb	
+find	verb	
+want	verb	
+buy	verb	
+sell	verb	
