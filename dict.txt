@@ -23,3 +23,16 @@ find	verb
 want	verb	
 buy	verb	
 sell	verb	
+
+large	adjective	size
+small	adjective	size
+long	adjective	length
+short	adjective	length
+hot	adjective	temperature
+cold	adjective	temperature
+red	adjective 	color
+blue	adjective 	color
+white	adjective 	color
+yellow	adjective 	color
+black	adjective 	color
+green	adjective 	color

@@ -76,9 +76,37 @@ class Speaker {
 					default : break;
 					}
 				} else { // Customer wants specific item
-					
-
-
+					if(l.getAttribute() == "") { 
+						switch((int)(Math.random() * 4)) {
+							case 0 : 
+								System.out.println("What color of " + l.getObject() + " do you want?");
+								break;
+							case 1 :
+								System.out.println("How many " + l.getObject() + " do you want?");
+								break;
+							case 2 :
+								System.out.println("Which size of " + l.getObject() + " do you find?");
+								break;
+							default : 
+								System.out.println("Already sold out. Sorry.");
+								break; 
+						}
+					} else {
+						switch((int)(Math.random() * 4)) {
+							case 0 : 
+								System.out.println("Good choice.");
+								break;
+							case 1 :
+								System.out.println((int)(Math.random() * 100) + " dollars, please.");
+								break;
+							case 2 :
+								System.out.println("We don't have such item.");
+								break;
+							default : 
+								System.out.println("Already sold out. Sorry.");
+								break; 
+						}
+					}
 				}
 			}
 		}

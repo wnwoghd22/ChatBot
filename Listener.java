@@ -31,6 +31,8 @@ class Listener {
 	public String getVerb() { return verb; }
 	private String object;
 	public String getObject() { return object; }
+	private String attribute;
+	public String getAttribute() { return attribute; }
 	private List<String> tokens;
 	public List<String> getTokens() { return tokens; }
 
@@ -52,7 +54,7 @@ class Listener {
 					Word word = new Word();
 					word.word = s.get(0);
 					word.tag = s.get(1);
-					word.category = word.tag.equals("noun") ? s.get(2) : null ;
+					word.category = word.tag.equals("verb") ? null : s.get(2) ;
 					dictionary.add(word);
 				}
 			}
@@ -64,7 +66,7 @@ class Listener {
 	private void clear() {
 		personal = 0;
 		question = 0; category = false;
-		verb = ""; object = "";
+		verb = ""; object = ""; attribute = "";
 		tokens = null;
 	}
 	public boolean listen(String s) {
@@ -99,13 +101,13 @@ class Listener {
 	private void checkWord() {
 		for(String s : tokens) {
 			for(Word w : dictionary) {
-				if(s.matches(w.word + "\\.?")) {
+				if(s.matches(w.word + ".?")) {
 					System.out.println(w.word);
 					if(w.tag.equals("verb")) { verb = w.word; }
 					else if(w.tag.equals("noun")) {
 						object = w.word;
 						category = w.isCategory();
-					}	
+					} else if(w.tag.equals("adjective")) { attribute = w.word; }
 				}
 			}
 		}
