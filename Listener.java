@@ -70,6 +70,8 @@ class Listener {
 		tokens = null;
 	}
 	public boolean listen(String s) {
+		clear();
+
 		if(s.contains("leaving")) return false;
 
 		Scanner sc = new Scanner(s);	
@@ -77,7 +79,7 @@ class Listener {
 
 		while(sc.hasNext()) tokens.add(sc.next());
 
-		for(String str : tokens) System.out.println(str);
+		// for(String str : tokens) System.out.println(str);
 
 		checkPerson();
 		checkWord();
@@ -102,7 +104,7 @@ class Listener {
 		for(String s : tokens) {
 			for(Word w : dictionary) {
 				if(s.matches(w.word + ".?")) {
-					System.out.println(w.word);
+					//System.out.println(w.word);
 					if(w.tag.equals("verb")) { verb = w.word; }
 					else if(w.tag.equals("noun")) {
 						object = w.word;

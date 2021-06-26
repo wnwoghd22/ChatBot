@@ -13,7 +13,7 @@ class Speaker {
 			case 2 : 
 				System.out.println("Is there anything you find?");
 				break;
-			default : 
+			default : // out of range : never selected
 				System.out.println("Hello, world!");
 				break;
 			}
@@ -76,7 +76,7 @@ class Speaker {
 					default : break;
 					}
 				} else { // Customer wants specific item
-					if(l.getAttribute() == "") { 
+					if(l.getAttribute().equals("")) { 
 						switch((int)(Math.random() * 4)) {
 							case 0 : 
 								System.out.println("What color of " + l.getObject() + " do you want?");

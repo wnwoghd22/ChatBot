@@ -10,6 +10,11 @@ cabbage	noun	vegetable
 potato	noun	vegetable
 radish	noun	vegetable
 
+furniture	noun	category
+table	noun	furniture
+bed	noun	furniture
+chair	noun	furniture
+
 cloth	noun	category
 shirt	noun	cloth
 pants	noun	cloth
