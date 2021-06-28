@@ -103,7 +103,7 @@ class Listener {
 	private void checkWord() {
 		for(String s : tokens) {
 			for(Word w : dictionary) {
-				if(s.matches(w.word + ".?")) {
+				if(s.matches("^" + w.word + ".?$")) {
 					//System.out.println(w.word);
 					if(w.tag.equals("verb")) { verb = w.word; }
 					else if(w.tag.equals("noun")) {
